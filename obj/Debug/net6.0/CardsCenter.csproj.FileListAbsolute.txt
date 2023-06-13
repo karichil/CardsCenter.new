@@ -13,3 +13,7 @@ C:\Users\karin\OneDrive\Pulpit\CardsCenter\CardsCenter\obj\Debug\net6.0\refint\C
 C:\Users\karin\OneDrive\Pulpit\CardsCenter\CardsCenter\obj\Debug\net6.0\CardsCenter.pdb
 C:\Users\karin\OneDrive\Pulpit\CardsCenter\CardsCenter\obj\Debug\net6.0\CardsCenter.genruntimeconfig.cache
 C:\Users\karin\OneDrive\Pulpit\CardsCenter\CardsCenter\obj\Debug\net6.0\ref\CardsCenter.dll
+C:\Users\karin\OneDrive\Pulpit\CardsCenter\CardsCenter\bin\Debug\net6.0\Serilog.dll
+C:\Users\karin\OneDrive\Pulpit\CardsCenter\CardsCenter\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\karin\OneDrive\Pulpit\CardsCenter\CardsCenter\bin\Debug\net6.0\Serilog.Sinks.File.dll
+C:\Users\karin\OneDrive\Pulpit\CardsCenter\CardsCenter\obj\Debug\net6.0\CardsCenter.csproj.CopyComplete

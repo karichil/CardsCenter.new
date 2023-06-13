@@ -1,24 +1,31 @@
 ﻿using System.Runtime.InteropServices;
+using Serilog;
 
 namespace CardsCenter;
 
 public class Konto
 {
-    private String nrKonta;
+    private string nrKonta;
     private double saldo;
-    private Random rnk = new Random();
+    private Random randomnrkonta = new Random();
     private List<Karta> listKart;
+    private ILogger _logger;
 
     public Konto()
     {
-        nrKonta = rnk.Next().ToString();
+        nrKonta = randomnrkonta.Next().ToString();
     }
-
-    public Konto(String nrkonta)
+    
+    public Konto(string nrkonta)
     {
+        if (listKart == null)
+        {
+            listKart = new List<Karta>();
+        }
         nrKonta = nrkonta;
     }
-
+    
+    
     public double GetSaldo()
     {
         return saldo;
@@ -31,12 +38,16 @@ public class Konto
 
     public void DodajKarte(Karta karta)
     {
+        karta.Saldo = saldo;
+        karta.konto = this;
         listKart.Add(karta);
+        Log.Information("Zostala dodana nowa "+karta);
     }
     
     public void UsunKarte(Karta karta)
     {
         listKart.Remove(karta);
+        Log.Information("Karta "+karta+" zostala usunieta");
     }
     
     public 
@@ -45,17 +56,21 @@ public class Konto
     {
         if (kwota <= saldo)
         {
-            Console.WriteLine("Kwota "+kwota+" zostala wyplacona.");
             saldo -= kwota;
+            Console.WriteLine("Kwota "+kwota+" zostala wyplacona.");
+            Log.Information("Kwota "+kwota+" zostala wyplacona, saldo konta"+ GetNrKonta() +"wynosi "+saldo);
         }
         else if (kwota > saldo)
         {
             Console.WriteLine("Na koncie nie ma takiej kwoty, saldo wynisi "+saldo);
+            Log.Information("Blad transakcji, na koncie nie ma takich srodkow");
         }
         else
         {
             Console.WriteLine("Niepoprawna kwota!");
         }
+
+        UpdateSaldo(saldo);
     }
 
     public void Wplac(double kwota)
@@ -63,11 +78,26 @@ public class Konto
         if (kwota >= 0)
         {
             saldo += kwota;
-            Console.WriteLine("Kwota "+kwota+" zostala wplacona, saldo konta wynosi "+saldo);
+            Console.WriteLine("Kwota "+kwota+" zostala wplacona, saldo konta wynosi "+ saldo);
+            Log.Information("Kwota "+kwota+" zostala wplacona, saldo konta wynosi "+ saldo);
         }
         else
         {
             Console.WriteLine("Niepoprawna kwota!");
+        }
+        UpdateSaldo(saldo);
+    }
+
+    public String GetKarty()
+    {
+        return String.Join("\n", listKart.Select(x => $"Nr karty:{x.GetNrKarty()}, saldo: {x.GetSaldoKarty()}"));
+    }
+
+    public void UpdateSaldo(double updatesaldo)
+    {
+        saldo = updatesaldo;
+        foreach ( var karta in listKart) {
+            karta.Saldo = saldo;
         }
     }
 }

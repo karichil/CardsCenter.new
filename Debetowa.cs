@@ -1,41 +1,36 @@
-﻿using System.Reflection.Metadata;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Reflection.Metadata;
+using Serilog;
 
 namespace CardsCenter;
 
 public class Debetowa:Karta
 {
-    protected double saldoKarty, limit;
-    public Debetowa(String nrkarty, double saldokarty, double lim) : base(nrKarty)
+    protected double limit;
+    public Debetowa(string nrkarty) : base(nrKarty)
     {
-        saldoKarty = saldokarty;
-        limit = lim;
+        nrKarty = nrkarty;
+        limit = -1000;
     }
 
-    public override String GetNrKarty()
+    public override string GetNrKarty()
     {
         return nrKarty;
     }
-
-    public override double GetLimit()
-    {
-        return limit;
-    }
-
-    public override double GetSaldoKarty()
-    {
-        return saldoKarty;
-    }
-
+    
     public override void WyplacZKarty(double kwota)
     {
-        if (kwota <= limit)
+        if (kwota <= Saldo-limit)
         {
             Console.WriteLine("Kwota "+kwota+" zostala wyplacona.");
-            saldoKarty -= kwota;
+            Saldo -= kwota;
+            konto.UpdateSaldo(Saldo);
+            Log.Information("Z karty debetowej "+Karta.nrKarty+" zostala wyplacona kwota "+kwota);
         }
-        else if (kwota > limit)
+        else if (kwota > Saldo-limit)
         {
-            Console.WriteLine("Limit został przekroczony mozesz wyplacic max : "+limit);
+            double max = Saldo - limit;
+            Console.WriteLine("Limit został przekroczony mozesz wyplacic max : "+max);
         }
         else
         {
@@ -47,8 +42,9 @@ public class Debetowa:Karta
     {
         if (kwota > 0)
         {
-            saldoKarty += kwota;
-            Console.WriteLine("Kwota " + kwota + " zostala wplacona, saldo karty wynosi " + saldoKarty);
+            Saldo += kwota;
+            Console.WriteLine("Kwota " + kwota + " zostala wplacona, saldo karty wynosi " + Saldo);
+            Log.Information("Na karte debetowa "+Karta.nrKarty+" zostala wplacona kwota "+Saldo);
         }
         else
         {
