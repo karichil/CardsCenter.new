@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using Serilog;
+﻿using Serilog;
 
 namespace CardsCenter;
 
@@ -23,8 +22,7 @@ public class Konto
         }
         nrKonta = nrkonta;
     }
-    
-    
+
     public double GetSaldo()
     {
         return saldo;
@@ -49,9 +47,7 @@ public class Konto
         Log.Information("Karta "+karta+" zostala usunieta");
     }
     
-    public 
-
-    void Wyplac(double kwota)
+    public void Wyplac(double kwota)
     {
         if (kwota <= saldo)
         {
@@ -99,4 +95,5 @@ public class Konto
             karta.Saldo = saldo;
         }
     }
+    
 }

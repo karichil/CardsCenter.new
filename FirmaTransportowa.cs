@@ -1,20 +1,17 @@
 ﻿namespace CardsCenter;
-public class FirmaTransportowa:Firma
+
+public class FirmaTransportowa : Firma
 {
     private string nazwaTransport, KRSTransportu;
 
-    public FirmaTransportowa(string nazwatransport, string krstransport) : base(nazwatransport,krstransport)
+    public FirmaTransportowa(string nazwatransport, string krstransport) : base(nazwatransport, krstransport)
     {
-        nazwaTransport=nazwatransport;
+        nazwaTransport = nazwatransport;
         KRSTransportu = krstransport;
     }
 
     public override string GetFirma()
     {
         return String.Format("Nazwa:" + nazwaTransport + " KRS:" + KRSTransportu);
-=======
-public class FirmaTransportowa  : Firma
-{
-    public FirmaTransportowa()
-    {
-     
+    }
+}

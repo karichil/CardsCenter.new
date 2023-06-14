@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Reflection.Metadata;
-using Serilog;
+﻿using Serilog;
 
 namespace CardsCenter;
 
@@ -50,5 +48,7 @@ public class Debetowa:Karta
         {
             Console.WriteLine("Niepoprawna kwota!");
         }
+        
     }
+    
 }

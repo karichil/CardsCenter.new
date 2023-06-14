@@ -16,7 +16,6 @@ public class Kredytowa:Karta
     {
         return nrKarty;
     }
-    
 
     public override void WyplacZKarty(double kwota)
     {

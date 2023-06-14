@@ -1,5 +1,4 @@
-﻿using System.Runtime.ExceptionServices;
-using Serilog;
+﻿using Serilog;
 
 namespace CardsCenter;
 
@@ -47,8 +46,7 @@ public class KlientCentrum
         listaFirma.Remove(firma);
         Log.Information("Firma"+firma+" zostala usunieta");
     }
-    
-    
+
     public String GetBankList()
     {
         return String.Join("\n", listaBank.Select(x => $"Bank:{x.GetKlienci()}"));
@@ -58,6 +56,5 @@ public class KlientCentrum
     {
         return String.Join("\n", listaFirma.Select(x => $"Firma:{x.GetFirma()}"));
     }
-    
 
 }
