@@ -13,6 +13,11 @@ public class Debetowa:Karta
         limit = -1000;
     }
 
+    public override double GetSaldoKarty()
+    {
+        return Saldo;
+    }
+
     public override string GetNrKarty()
     {
         return nrKarty;
@@ -24,8 +29,7 @@ public class Debetowa:Karta
         {
             Console.WriteLine("Kwota "+kwota+" zostala wyplacona.");
             Saldo -= kwota;
-            konto.UpdateSaldo(Saldo);
-            Log.Information("Z karty debetowej "+Karta.nrKarty+" zostala wyplacona kwota "+kwota);
+            Log.Information("Platonosc: karta debetowa "+Karta.nrKarty+" wyplacona kwota "+kwota);
         }
         else if (kwota > Saldo-limit)
         {
@@ -43,7 +47,7 @@ public class Debetowa:Karta
         if (kwota > 0)
         {
             Saldo += kwota;
-            Console.WriteLine("Kwota " + kwota + " zostala wplacona, saldo karty wynosi " + Saldo);
+            Console.WriteLine("Wplata " + kwota + " , saldo karty wynosi " + Saldo);
             Log.Information("Na karte debetowa "+Karta.nrKarty+" zostala wplacona kwota "+Saldo);
         }
         else

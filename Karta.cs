@@ -15,10 +15,8 @@ public abstract class Karta
     {
         nrKarty = nrk;
     }
-    public double GetSaldoKarty()
-    {
-        return Saldo;
-    }
+
+    public abstract double GetSaldoKarty();
     public abstract string GetNrKarty();
 
     public abstract void WyplacZKarty(double kwota);

@@ -1,24 +1,22 @@
 ﻿namespace CardsCenter;
 
 
-public class ZakladUslugowy:Firma
+public class ZakladUslugowy : Firma
 {
     private string nazwaZakladu, KRSZakladu;
 
-    public ZakladUslugowy(string nazwazaklad, string krszaklad) : base(nazwazaklad,krszaklad)
+    public ZakladUslugowy(string nazwazaklad, string krszaklad) : base(nazwazaklad, krszaklad)
     {
-        nazwaZakladu= nazwazaklad;
+        nazwaZakladu = nazwazaklad;
         KRSZakladu = krszaklad;
     }
 
     public override string GetFirma()
     {
         return String.Format("Nazwa:" + nazwaZakladu + " KRS:" + KRSZakladu);
-=======
-public class ZakladUslugowy : Firma
-{
-    public ZakladUslugowy()
-    {
-        
     }
-}
+    public override string GetKlientCentrum()
+    {
+        return GetFirma();
+    }
+}    
