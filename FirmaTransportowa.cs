@@ -1,5 +1,4 @@
 ﻿namespace CardsCenter;
-
 public class FirmaTransportowa:Firma
 {
     private string nazwaTransport, KRSTransportu;
@@ -13,5 +12,9 @@ public class FirmaTransportowa:Firma
     public override string GetFirma()
     {
         return String.Format("Nazwa:" + nazwaTransport + " KRS:" + KRSTransportu);
-    }
-}
+=======
+public class FirmaTransportowa  : Firma
+{
+    public FirmaTransportowa()
+    {
+     

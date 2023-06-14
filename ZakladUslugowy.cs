@@ -1,5 +1,6 @@
 ﻿namespace CardsCenter;
 
+
 public class ZakladUslugowy:Firma
 {
     private string nazwaZakladu, KRSZakladu;
@@ -13,5 +14,11 @@ public class ZakladUslugowy:Firma
     public override string GetFirma()
     {
         return String.Format("Nazwa:" + nazwaZakladu + " KRS:" + KRSZakladu);
+=======
+public class ZakladUslugowy : Firma
+{
+    public ZakladUslugowy()
+    {
+        
     }
 }
