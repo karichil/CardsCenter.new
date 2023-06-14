@@ -1,29 +1,22 @@
 ﻿namespace CardsCenter;
+using Serilog;
 
 public class Kredytowa:Karta
 {
-    protected double dlug, limit;
+    private double dlug, limit;
 
-    public Kredytowa(String nrkarty, double lim) : base(nrKarty)
+    public Kredytowa(string nrkarty) : base(nrKarty)
     {
+        nrKarty = nrkarty;
         dlug = 0;
-        limit = lim;
+        limit = -50000;
     }
 
-    public override String GetNrKarty()
+    public override string GetNrKarty()
     {
         return nrKarty;
     }
-
-    public override double GetLimit()
-    {
-        return limit;
-    }
     
-    public override double GetSaldoKarty()
-    {
-        return dlug;
-    }
 
     public override void WyplacZKarty(double kwota)
     {
@@ -31,6 +24,7 @@ public class Kredytowa:Karta
         {
             Console.WriteLine("Kwota "+kwota+" zostala wyplacona, dlug wynosi "+dlug);
             dlug -= kwota;
+            Log.Information("Na karte kredotowa "+Karta.nrKarty+" zostal nalozony dlug "+dlug);
         }
         else if (kwota > limit)
         {
@@ -42,5 +36,16 @@ public class Kredytowa:Karta
         }
     }
 
-    public override void WplacNaKarte(double kwota){}
+    public override void WplacNaKarte(double kwota)
+    {
+        if (dlug < 0)
+        {
+            dlug += kwota;
+            Log.Information("Na karte kredotowa "+Karta.nrKarty+" zostala wlpacona ktowa  "+kwota+" dlug wynosi "+dlug);
+        }
+        else
+        {
+            Console.WriteLine("Nie mozesz wplacac na karte kredytowa jesli nie masz dlugu!");
+        }
+    }
 }

@@ -1,11 +1,24 @@
 ﻿namespace CardsCenter;
-using System.IO;
+using Serilog;
 
 public class Centrum
 {
-    
-    public void Archwizacja()
+    private List<KlientCentrum> listaKlientCentrum;
+
+    public Centrum()
     {
-        StreamWriter archi = new StreamWriter("archiwum.txt");
+        listaKlientCentrum = new List<KlientCentrum>();
+    }
+
+    public void DodajKlientaCentrum(KlientCentrum klientcentrum)
+    {
+        listaKlientCentrum.Add(klientcentrum);
+        Log.Information("Zostal dodany nowy klient Centrum "+klientcentrum);
+    }
+
+    public void UsunKlientaCentrum(KlientCentrum klientcentrum)
+    {
+        listaKlientCentrum.Remove(klientcentrum);
+        Log.Information("Z Centrum zostal usuniety klient "+klientcentrum);
     }
 }

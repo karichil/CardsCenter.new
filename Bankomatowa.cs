@@ -1,38 +1,30 @@
 ﻿namespace CardsCenter;
+using Serilog;
 
 public class Bankomatowa:Karta
 {
-    protected double saldoKarty, limit;
-    public Bankomatowa(String nrkarty, double saldokarty) : base(nrKarty)
+    public Bankomatowa(string nrkarty) : base(nrKarty)
     {
-        saldoKarty = saldokarty;
+        nrKarty = nrkarty;
     }
 
-    public override String GetNrKarty()
+    public override string GetNrKarty()
     {
         return nrKarty;
     }
 
-    public override double GetLimit()
-    {
-        return limit;
-    }
-
-    public override double GetSaldoKarty()
-    {
-        return saldoKarty;
-    }
-
     public override void WyplacZKarty(double kwota)
     {
-        if (kwota <= limit)
+        if (kwota <= Saldo)
         {
             Console.WriteLine("Kwota "+kwota+" zostala wyplacona.");
-            saldoKarty -= kwota;
+            Saldo -= kwota;
+            konto.UpdateSaldo(Saldo);
+            Log.Information("Z karty bankomatowej "+Karta.nrKarty+" zostala wyplacona kwota "+kwota);
         }
-        else if (kwota > limit)
+        else if (kwota > Saldo)
         {
-            Console.WriteLine("Limit został przekroczony mozesz wyplacic max : "+limit);
+            Console.WriteLine("Nie możesz wypłacić tej kwoty, nie posiadasz takiech srodkow na koncie!");
         }
         else
         {
@@ -44,8 +36,9 @@ public class Bankomatowa:Karta
     {
         if (kwota > 0)
         {
-            saldoKarty += kwota;
-            Console.WriteLine("Kwota " + kwota + " zostala wplacona, saldo karty wynosi " + saldoKarty);
+            Saldo += kwota;
+            Console.WriteLine("Kwota " + kwota + " zostala wplacona, saldo karty wynosi " + Saldo);
+            Log.Information("Na karte bankomatowa "+Karta.nrKarty+" zostala wplacona kwota "+Saldo);
         }
         else
         {

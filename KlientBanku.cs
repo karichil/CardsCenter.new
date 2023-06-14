@@ -1,27 +1,34 @@
 ﻿namespace CardsCenter;
+using Serilog;
 
 public abstract class KlientBanku
 {
-    private List<Konto> listakont;
-    
+    private List<Konto> listaKont;
     public KlientBanku()
     {
-        listakont = new List<Konto>();
+        if (listaKont==null)
+        {
+            listaKont = new List<Konto>();   
+        }
     }
 
     public void DodajKonto(Konto konto)
     {
-        listakont.Add(konto);
+        listaKont.Add(konto);
+        Log.Information("Zostalo dodane nowe konto "+konto);
+        
     }
     
     public void UsunKonto(Konto konto)
     {
-        listakont.Remove(konto);
+        listaKont.Remove(konto);
+        Log.Information("Zostal usuniety klient "+konto);
     }
     
-    public List<Konto> GetKonta()
+    public string GetKonta()
     {
-        return listakont;
+        return String.Join("\n", listaKont.Select(x => $"Nr konta:{x.GetNrKonta()}, {x.GetKarty()}"));
     }
+    
     
 }
