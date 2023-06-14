@@ -4,7 +4,6 @@ using Serilog;
 public abstract class KlientBanku
 {
     private List<Konto> listaKont;
-    private ILogger _logger;    
     public KlientBanku()
     {
         if (listaKont==null)

@@ -9,7 +9,6 @@ public class Konto
     private double saldo;
     private Random randomnrkonta = new Random();
     private List<Karta> listKart;
-    private ILogger _logger;
 
     public Konto()
     {

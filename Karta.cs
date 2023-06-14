@@ -5,12 +5,11 @@ public abstract class Karta
     public double Saldo;
     public Konto konto;
     protected static string nrKarty;
-    protected Random nk = new Random();
-    private ILogger _logger;
+    protected Random randomnrkonta = new Random();
 
     public Karta()
     {
-        nrKarty = nk.Next().ToString();
+        nrKarty = randomnrkonta.Next().ToString();
     }
     public Karta(string nrk)
     {

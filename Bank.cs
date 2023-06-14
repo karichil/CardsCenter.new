@@ -5,7 +5,6 @@ public class Bank:KlientCentrum
 {
     private List<KlientBanku> listaKlientow;
     private string nazwa;
-    private ILogger _logger;
 
     public Bank()
     {

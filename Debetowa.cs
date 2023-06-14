@@ -6,7 +6,7 @@ namespace CardsCenter;
 
 public class Debetowa:Karta
 {
-    protected double limit;
+    private double limit;
     public Debetowa(string nrkarty) : base(nrKarty)
     {
         nrKarty = nrkarty;

@@ -3,7 +3,7 @@ using Serilog;
 
 public class Kredytowa:Karta
 {
-    protected double dlug, limit;
+    private double dlug, limit;
 
     public Kredytowa(string nrkarty) : base(nrKarty)
     {
