@@ -1,25 +1,25 @@
 ﻿namespace CardsCenter;
-
+using Serilog;
 public abstract class Karta
 {
-    protected static String nrKarty;
-    protected Random nk = new Random();
+    public double Saldo;
+    public Konto konto;
+    protected static string nrKarty;
+    protected Random randomnrkonta = new Random();
 
     public Karta()
     {
-        nrKarty = nk.Next().ToString();
+        nrKarty = randomnrkonta.Next().ToString();
     }
-
-    public Karta(String nrk)
+    public Karta(string nrk)
     {
         nrKarty = nrk;
     }
-
-    public abstract String GetNrKarty();
-
-    public abstract double GetLimit();
-    
-    public abstract double GetSaldoKarty();
+    public double GetSaldoKarty()
+    {
+        return Saldo;
+    }
+    public abstract string GetNrKarty();
 
     public abstract void WyplacZKarty(double kwota);
 

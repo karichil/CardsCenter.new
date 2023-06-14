@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "eJiASiPxNQRRT1LjCWSSB9BK8RTwUij18POKXOs4Y+u/oxQUr1YfWeqtQ/zEdNxm/uZSuvckfKGl1BfCiACxuQ==",
+  "dgSpecHash": "rHTbs/YBnUkH6ix2pNy9dUBUN3K85vMLmFY7wszoFGyLTRikBpqGQOTMODY6AwnjlwMibo7XpkH1sAcxx1omwQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\karin\\OneDrive\\Pulpit\\CardsCenter\\CardsCenter\\CardsCenter.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\karin\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
+    "C:\\Users\\karin\\.nuget\\packages\\serilog.sinks.console\\4.1.1-dev-00910\\serilog.sinks.console.4.1.1-dev-00910.nupkg.sha512",
+    "C:\\Users\\karin\\.nuget\\packages\\serilog.sinks.file\\5.0.1-dev-00947\\serilog.sinks.file.5.0.1-dev-00947.nupkg.sha512"
+  ],
   "logs": []
 }

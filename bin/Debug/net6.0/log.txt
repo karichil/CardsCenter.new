@@ -1,0 +1,28 @@
+2023-06-12 16:54:51.607 +02:00 [INF] Kwota 200 zostala wplacona, saldo konta wynosi 200
+2023-06-12 16:54:51.616 +02:00 [INF] Kwota 150 zostala wyplacona, saldo konta123wynosi 50
+2023-06-12 16:54:51.616 +02:00 [INF] Zostala dodana nowa CardsCenter.Bankomatowa
+2023-06-12 16:54:51.616 +02:00 [INF] Zostala dodana nowa CardsCenter.Debetowa
+2023-06-12 16:54:51.617 +02:00 [INF] Kwota 25 zostala wplacona, saldo konta wynosi 75
+2023-06-12 16:54:51.617 +02:00 [INF] Z karty bankomatowej 
+2023-06-12 16:54:51.622 +02:00 [INF] Zostal dodany nowy klient CardsCenter.Osoba
+2023-06-12 17:05:25.265 +02:00 [INF] Kwota 200 zostala wplacona, saldo konta wynosi 200
+2023-06-12 17:05:25.275 +02:00 [INF] Kwota 150 zostala wyplacona, saldo konta123wynosi 50
+2023-06-12 17:05:25.276 +02:00 [INF] Zostala dodana nowa CardsCenter.Bankomatowa
+2023-06-12 17:05:25.276 +02:00 [INF] Zostala dodana nowa CardsCenter.Debetowa
+2023-06-12 17:05:25.276 +02:00 [INF] Kwota 25 zostala wplacona, saldo konta wynosi 75
+2023-06-12 17:05:25.277 +02:00 [INF] Z karty bankomatowej 123456zostala wyplacona kwota15
+2023-06-12 17:05:25.282 +02:00 [INF] Zostal dodany nowy klient CardsCenter.Osoba
+2023-06-12 17:14:59.372 +02:00 [INF] Kwota 200 zostala wplacona, saldo konta wynosi 200
+2023-06-12 17:14:59.382 +02:00 [INF] Kwota 150 zostala wyplacona, saldo konta123wynosi 50
+2023-06-12 17:14:59.382 +02:00 [INF] Zostala dodana nowa CardsCenter.Bankomatowa
+2023-06-12 17:14:59.382 +02:00 [INF] Zostala dodana nowa CardsCenter.Debetowa
+2023-06-12 17:14:59.383 +02:00 [INF] Kwota 25 zostala wplacona, saldo konta wynosi 75
+2023-06-12 17:14:59.383 +02:00 [INF] Z karty debetowej 123456 zostala wyplacona kwota 15
+2023-06-12 17:14:59.391 +02:00 [INF] Zostal dodany nowy klient CardsCenter.Osoba
+2023-06-13 18:47:59.645 +02:00 [INF] Kwota 200 zostala wplacona, saldo konta wynosi 200
+2023-06-13 18:47:59.667 +02:00 [INF] Kwota 150 zostala wyplacona, saldo konta123wynosi 50
+2023-06-13 18:47:59.669 +02:00 [INF] Zostala dodana nowa CardsCenter.Bankomatowa
+2023-06-13 18:47:59.669 +02:00 [INF] Zostala dodana nowa CardsCenter.Debetowa
+2023-06-13 18:47:59.670 +02:00 [INF] Kwota 25 zostala wplacona, saldo konta wynosi 75
+2023-06-13 18:47:59.672 +02:00 [INF] Z karty debetowej 123456 zostala wyplacona kwota 15
+2023-06-13 18:47:59.685 +02:00 [INF] Zostal dodany nowy klient CardsCenter.Osoba
