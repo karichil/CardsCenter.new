@@ -8,6 +8,11 @@ public class Bankomatowa:Karta
         nrKarty = nrkarty;
     }
 
+    public override double GetSaldoKarty()
+    {
+        return Saldo;
+    }
+
     public override string GetNrKarty()
     {
         return nrKarty;
@@ -19,8 +24,7 @@ public class Bankomatowa:Karta
         {
             Console.WriteLine("Kwota "+kwota+" zostala wyplacona.");
             Saldo -= kwota;
-            konto.UpdateSaldo(Saldo);
-            Log.Information("Z karty bankomatowej "+Karta.nrKarty+" zostala wyplacona kwota "+kwota);
+            Log.Information("Platnosc: karta bankomatowa "+Karta.nrKarty+" wyplacona kwota "+kwota);
         }
         else if (kwota > Saldo)
         {
@@ -37,7 +41,7 @@ public class Bankomatowa:Karta
         if (kwota > 0)
         {
             Saldo += kwota;
-            Console.WriteLine("Kwota " + kwota + " zostala wplacona, saldo karty wynosi " + Saldo);
+            Console.WriteLine("Wplata " + kwota + " , saldo karty wynosi " + Saldo);
             Log.Information("Na karte bankomatowa "+Karta.nrKarty+" zostala wplacona kwota "+Saldo);
         }
         else

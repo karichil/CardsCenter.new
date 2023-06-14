@@ -12,6 +12,11 @@ public class Kredytowa:Karta
         limit = -50000;
     }
 
+    public override double GetSaldoKarty()
+    {
+        return Saldo;
+    }
+
     public override string GetNrKarty()
     {
         return nrKarty;
@@ -24,7 +29,7 @@ public class Kredytowa:Karta
         {
             Console.WriteLine("Kwota "+kwota+" zostala wyplacona, dlug wynosi "+dlug);
             dlug -= kwota;
-            Log.Information("Na karte kredotowa "+Karta.nrKarty+" zostal nalozony dlug "+dlug);
+            Log.Information("Platnosc: karta kredotowa "+Karta.nrKarty+" nalozony dlug "+dlug);
         }
         else if (kwota > limit)
         {
@@ -41,7 +46,7 @@ public class Kredytowa:Karta
         if (dlug < 0)
         {
             dlug += kwota;
-            Log.Information("Na karte kredotowa "+Karta.nrKarty+" zostala wlpacona ktowa  "+kwota+" dlug wynosi "+dlug);
+            Log.Information("Wplata " + kwota + ", dlug wynosi "+dlug);
         }
         else
         {

@@ -4,6 +4,7 @@ using Serilog;
 public abstract class KlientBanku
 {
     private List<Konto> listaKont;
+    private Konto konto;
     public KlientBanku()
     {
         if (listaKont==null)
@@ -15,14 +16,14 @@ public abstract class KlientBanku
     public void DodajKonto(Konto konto)
     {
         listaKont.Add(konto);
-        Log.Information("Zostalo dodane nowe konto "+konto);
+        Log.Information("Konto: "+ konto.GetNrKonta()+" zostalo dodane");
         
     }
     
     public void UsunKonto(Konto konto)
     {
         listaKont.Remove(konto);
-        Log.Information("Zostal usuniety klient "+konto);
+        Log.Information("Konto: "+ konto.GetNrKonta()+" zostalo usuniete");
     }
     
     public string GetKonta()

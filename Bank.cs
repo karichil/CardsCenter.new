@@ -4,32 +4,35 @@ namespace CardsCenter;
 public class Bank:KlientCentrum
 {
     private List<KlientBanku> listaKlientow;
-    private string nazwa;
+    private string nazwaBanku;
 
     public Bank()
     {
-        nazwa = "Bank";
+        nazwaBanku = "Bank";
+        listaKlientow = new List<KlientBanku>();
     }
 
     public Bank(string nazwabanku)
     {
-        nazwa = nazwabanku;
-        if (listaKlientow == null)
-        {
-            listaKlientow = new List<KlientBanku>();
-        }
+        nazwaBanku = nazwabanku;
+        listaKlientow = new List<KlientBanku>();
     }
 
-    public void DodajKlienta(KlientBanku klient)
+    public string GetNazwaBanku()
     {
-        listaKlientow.Add(klient);
-        Log.Information("Zostal dodany nowy klient "+klient);
+        return nazwaBanku;
     }
 
-    public void UsunKlienta(KlientBanku klient)
+    public void DodajKlienta(Osoba osoba)
     {
-        listaKlientow.Remove(klient);
-        Log.Information("Z banku zostal usuniety klient "+klient);
+        listaKlientow.Add(osoba);
+        Log.Information("Klient banku: "+ osoba.GetOsoba()+" zostal dodany");
+    }
+
+    public void UsunKlienta(Osoba osoba)
+    {
+        listaKlientow.Remove(osoba);
+        Log.Information("Klient banku: "+ osoba.GetOsoba()+" zostal usuniety");
         
     }
     
@@ -37,5 +40,9 @@ public class Bank:KlientCentrum
     {
         return String.Join("\n", listaKlientow.Select(x => $"Konto:{x.GetKonta()}"));
     }
-    
+
+    public override string GetKlientCentrum()
+    {
+        return GetNazwaBanku();
+    }
 }
