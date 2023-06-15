@@ -1,15 +1,13 @@
 ﻿namespace CardsCenter;
 using Serilog;
-using System.IO;
 
 public class Centrum
 {
     private List<KlientCentrum> listaKlientCentrum;
-    private string archiwum=@"C:\Users\karin\OneDrive\Pulpit\CardsCenter\CardsCenter\bin\Debug\net6.0\log.txt";
 
     public Centrum()
     {
-        File.OpenRead(archiwum);
+        listaKlientCentrum = new List<KlientCentrum>();
     }
 
     public void DodajKlientaCentrum(KlientCentrum klientcentrum)
@@ -23,20 +21,4 @@ public class Centrum
         listaKlientCentrum.Remove(klientcentrum);
         Log.Information("Z Centrum zostal usuniety klient "+klientcentrum.GetKlientCentrum());
     }
-    
-    public void PrzeszukajArchiwum(string parametr)
-    {
-        using (StreamReader odczyt = new StreamReader("log.txt"))
-        {
-            string linia;
-            while ((linia = odczyt.ReadLine()) != null)
-            {
-                if (linia.Contains(parametr))
-                {
-                    Console.WriteLine(linia);
-                }
-            }
-        }
-    } 
-
 }

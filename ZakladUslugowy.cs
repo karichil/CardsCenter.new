@@ -13,7 +13,7 @@ public class ZakladUslugowy : Firma
 
     public override string GetFirma()
     {
-        return String.Format("Nazwa:" + nazwaZakladu + " KRS:" + KRSZakladu);
+        return String.Format("Nazwa zakladu transportowego: " + nazwaZakladu + " KRS:" + KRSZakladu);
     }
     public override string GetKlientCentrum()
     {

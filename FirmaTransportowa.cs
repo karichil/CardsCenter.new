@@ -12,7 +12,7 @@ public class FirmaTransportowa : Firma
 
     public override string GetFirma()
     {
-        return String.Format("Nazwa:" + nazwaTransport + " KRS:" + KRSTransportu);
+        return String.Format("Nazwa firmy transportowej: " + nazwaTransport + " KRS:" + KRSTransportu);
     }
 
     public override string GetKlientCentrum()

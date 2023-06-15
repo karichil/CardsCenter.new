@@ -12,7 +12,7 @@ public class Sklep:Firma
 
     public override string GetFirma()
     {
-        return String.Format("Nazwa:" + nazwaSklapu + " KRS:" + KRSSklapu);
+        return String.Format("Nazwa sklepu: " + nazwaSklapu + " KRS:" + KRSSklapu);
     }
     public override string GetKlientCentrum()
     {

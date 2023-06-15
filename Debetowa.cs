@@ -7,10 +7,15 @@ namespace CardsCenter;
 public class Debetowa:Karta
 {
     private double limit;
+    private Random randomnrkarty = new Random();
     public Debetowa(string nrkarty) : base(nrKarty)
     {
         nrKarty = nrkarty;
         limit = -1000;
+    }
+    public Debetowa()
+    {
+        nrKarty = randomnrkarty.Next().ToString();
     }
 
     public override double GetSaldoKarty()
@@ -21,6 +26,17 @@ public class Debetowa:Karta
     public override string GetNrKarty()
     {
         return nrKarty;
+    }
+    public override bool SprawdzAutoryzacje(double kwota)
+    {
+        if (kwota <= Saldo)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     
     public override void WyplacZKarty(double kwota)

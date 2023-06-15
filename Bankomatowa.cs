@@ -3,9 +3,20 @@ using Serilog;
 
 public class Bankomatowa:Karta
 {
+    private Random randomnrkarty = new Random();
     public Bankomatowa(string nrkarty) : base(nrKarty)
     {
         nrKarty = nrkarty;
+    }
+    
+    public Bankomatowa()
+    {
+        nrKarty = randomnrkarty.Next().ToString();
+    }
+
+    public override bool SprawdzAutoryzacje(double kwota)
+    {
+        return false;
     }
 
     public override double GetSaldoKarty()
@@ -24,6 +35,7 @@ public class Bankomatowa:Karta
         {
             Console.WriteLine("Kwota "+kwota+" zostala wyplacona.");
             Saldo -= kwota;
+            //SprawdzAutoryzacje(kwota);
             Log.Information("Platnosc: karta bankomatowa "+Karta.nrKarty+" wyplacona kwota "+kwota);
         }
         else if (kwota > Saldo)

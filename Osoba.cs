@@ -15,5 +15,10 @@ public class Osoba : KlientBanku
     {
         return String.Format(imie+" "+nazwisko+" pesel: "+PESEL);
     }
+
+    public string GetPesel()
+    {
+        return PESEL;
+    }
     
 }
