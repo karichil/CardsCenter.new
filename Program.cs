@@ -30,7 +30,7 @@ namespace CardsCenter
             centrum.DodajKlientaCentrum(new Sklep("Sklep2", "2"));
             centrum.DodajKlientaCentrum(new FirmaTransportowa("FirmaTransportowa1", "3"));
             centrum.DodajKlientaCentrum(new FirmaTransportowa("FirmaTransportowa2", "4"));
-            centrum.DodajKlientaCentrum(klientCentrum6);
+            centrum.DodajKlientaCentrum(new FirmaTransportowa("FirmaTransportowa3", "5");
             centrum.DodajKlientaCentrum(klientCentrum7);
             centrum.DodajKlientaCentrum(klientCentrum8);
             

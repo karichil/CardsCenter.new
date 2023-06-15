@@ -1,9 +1,12 @@
-﻿namespace CardsCenter;
+﻿using System.Security.Principal;
+
+namespace CardsCenter;
 using Serilog;
 
 public class Centrum
 {
     private List<KlientCentrum> listaKlientCentrum;
+    private string nazwa;
 
     public Centrum()
     {
