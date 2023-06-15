@@ -1,0 +1,28 @@
+2023-06-15 12:37:08.005 +02:00 [INF] Konto: 348315474 zostalo dodane
+2023-06-15 12:37:08.016 +02:00 [INF] Konto: 1201860127 zostalo dodane
+2023-06-15 12:37:08.016 +02:00 [INF] Konto: 1861325367 zostalo dodane
+2023-06-15 12:37:08.016 +02:00 [INF] Konto: 461525865 zostalo dodane
+2023-06-15 12:39:44.137 +02:00 [INF] Zostal dodany nowy klient Centrum CardsCenter.Bank
+2023-06-15 12:39:44.146 +02:00 [INF] Zostal dodany nowy klient Centrum CardsCenter.Sklep
+2023-06-15 12:39:44.146 +02:00 [INF] Zostal dodany nowy klient Centrum CardsCenter.Sklep
+2023-06-15 12:39:44.146 +02:00 [INF] Zostal dodany nowy klient Centrum CardsCenter.FirmaTransportowa
+2023-06-15 12:39:44.146 +02:00 [INF] Zostal dodany nowy klient Centrum CardsCenter.FirmaTransportowa
+2023-06-15 12:39:44.146 +02:00 [INF] Zostal dodany nowy klient Centrum CardsCenter.FirmaTransportowa
+2023-06-15 12:39:44.146 +02:00 [INF] Zostal dodany nowy klient Centrum CardsCenter.ZakladUslugowy
+2023-06-15 12:39:44.146 +02:00 [INF] Zostal dodany nowy klient Centrum CardsCenter.ZakladUslugowy
+2023-06-15 12:39:44.147 +02:00 [INF] Konto: 1965185376 zostalo dodane
+2023-06-15 12:39:44.147 +02:00 [INF] Konto: 181208592 zostalo dodane
+2023-06-15 12:39:44.147 +02:00 [INF] Konto: 1777620573 zostalo dodane
+2023-06-15 12:39:44.147 +02:00 [INF] Konto: 686275143 zostalo dodane
+2023-06-15 12:40:37.883 +02:00 [INF] Zostal dodany nowy klient Centrum Bank1
+2023-06-15 12:40:37.891 +02:00 [INF] Zostal dodany nowy klient Centrum Nazwa sklepu:Sklep1 KRS:1
+2023-06-15 12:40:37.891 +02:00 [INF] Zostal dodany nowy klient Centrum Nazwa sklepu:Sklep2 KRS:2
+2023-06-15 12:40:37.892 +02:00 [INF] Zostal dodany nowy klient Centrum Nazwa firmy transportowej:FirmaTransportowa1 KRS:3
+2023-06-15 12:40:37.892 +02:00 [INF] Zostal dodany nowy klient Centrum Nazwa firmy transportowej:FirmaTransportowa2 KRS:4
+2023-06-15 12:40:37.892 +02:00 [INF] Zostal dodany nowy klient Centrum Nazwa firmy transportowej:FirmaTransportowa3 KRS:5
+2023-06-15 12:40:37.892 +02:00 [INF] Zostal dodany nowy klient Centrum Nazwa zakladu transportowego:ZakladUslugowy1 KRS:6
+2023-06-15 12:40:37.892 +02:00 [INF] Zostal dodany nowy klient Centrum Nazwa zakladu transportowego:ZakladUslugowy2 KRS:7
+2023-06-15 12:40:37.892 +02:00 [INF] Konto: 1200732893 zostalo dodane
+2023-06-15 12:40:37.892 +02:00 [INF] Konto: 1532158295 zostalo dodane
+2023-06-15 12:40:37.892 +02:00 [INF] Konto: 1167011049 zostalo dodane
+2023-06-15 12:40:37.892 +02:00 [INF] Konto: 1133444549 zostalo dodane
